@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Tickers.css';
+import Cryptocyrrency from './Cryptocurrency';
 
 class Tickers extends Component {
 
@@ -9,26 +10,38 @@ class Tickers extends Component {
             data: [
                 {
                     id: "bitcoin",
-                    price: "1"
+                    name: "Bitcoin"
+                    symbol: "BTC"
+                    price_usd: "1"
+                    percent_change_1h: "0"
+                    percent_change_24h: "0"
+                    percent_change_7d: "0"
                 },
                 {
                     id: "ethereum",
-                    price: "1"
+                    name: "Ethereum"
+                    symbol: "ETH"
+                    price_usd: "1"
+                    percent_change_1h: "0"
+                    percent_change_24h: "0"
+                    percent_change_7d: "0"
                 },
                 {
                     id: "litecoin",
-                    price: "1"
-                }
+                    name: "Litecoin"
+                    symbol: "LTC"
+                    price_usd: "1"
+                    percent_change_1h: "0"
+                    percent_change_24h: "0"
+                    percent_change_7d: "0"
+                },
             ]
         };
     }
 
     render() {
         var tickers = this.state.data.map((currency) =>
-            <li key={currency.id}>
-                <h3>{currency.id}</h3>
-                <h4>{currency.price} USD</h4>
-            </li>
+            <Cryptocyrrency data={currency} key={currency.id} />
         );
         return (
             <div className="tickers-container">
