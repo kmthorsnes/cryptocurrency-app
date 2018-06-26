@@ -1,6 +1,4 @@
-import React, {
-    Component
-} from 'react';
+import React, { Component } from 'react';
 import './Tickers.css';
 
 class Tickers extends Component {
@@ -8,16 +6,17 @@ class Tickers extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: [{
-                    id: "bitcoin"
+            data: [
+                {
+                    id: "bitcoin",
                     price: "1"
                 },
                 {
-                    id: "ethereum"
+                    id: "ethereum",
                     price: "1"
                 },
                 {
-                    id: "litecoin"
+                    id: "litecoin",
                     price: "1"
                 }
             ]
@@ -25,22 +24,19 @@ class Tickers extends Component {
     }
 
     render() {
-        var tickers = this.state.data.map((currency)) =>
+        var tickers = this.state.data.map((currency) =>
             <li key={currency.id}>
-                <h3>= {currency.id}</h3> 
-                <h4>= {currency.id}</h4> 
+                <h3>={currency.id}</h3>
+                <h4>={currency.price} USD</h4>
             </li>
-    );
-    return ( <
-        div className = "tickers-container" >
-        <
-        ul className = "tickers" > {
-            tickers
-        } < /ul> <
-        p > Updates every minute.Thanks coinmarketcap.com < /p> <
-        /div>
-    );
-}
+        );
+        return (
+            <div className="tickers-container">
+                <ul className="tickers">{tickers}</ul>
+                <p> Updates every minute. Thanks coinmarketcap.com</p>
+            </div>
+        );
+    }
 }
 
-export default Tickers;
+export default Tickers; 
