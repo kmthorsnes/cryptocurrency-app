@@ -15,7 +15,7 @@ class Tickers extends Component {
                     id: "bitcoin",
                     name: "Bitcoin",
                     symbol: "BTC",
-                    price_usd: "1",
+                    price_nok: "1",
                     percent_change_1h: "0",
                     percent_change_24h: "0",
                     percent_change_7d: "0"
@@ -24,7 +24,7 @@ class Tickers extends Component {
                     id: "ethereum",
                     name: "Ethereum",
                     symbol: "ETH",
-                    price_usd: "1",
+                    nok: "1",
                     percent_change_1h: "0",
                     percent_change_24h: "0",
                     percent_change_7d: "0"
@@ -33,7 +33,7 @@ class Tickers extends Component {
                     id: "litecoin",
                     name: "Litecoin",
                     symbol: "LTC",
-                    price_usd: "1",
+                    price_nok: "1",
                     percent_change_1h: "0",
                     percent_change_24h: "0",
                     percent_change_7d: "0"
@@ -43,7 +43,7 @@ class Tickers extends Component {
     }
 
     fetchCryptocurrencyData() {
-        axios.get('https://api.coinmarketcap.com/v1/ticker/?limit=10')
+        axios.get('https://api.coinmarketcap.com/v1/ticker/?convert=NOK&limit=10')
                 .then(response => {
                     var wanted = ['bitcoin', 'ethereum', 'litecoin'];
                     var result = response.data.filter(currency => wanted.includes(currency.id));
