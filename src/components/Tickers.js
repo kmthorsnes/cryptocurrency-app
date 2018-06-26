@@ -10,29 +10,29 @@ class Tickers extends Component {
             data: [
                 {
                     id: "bitcoin",
-                    name: "Bitcoin"
-                    symbol: "BTC"
-                    price_usd: "1"
-                    percent_change_1h: "0"
-                    percent_change_24h: "0"
+                    name: "Bitcoin",
+                    symbol: "BTC",
+                    price_usd: "1",
+                    percent_change_1h: "0",
+                    percent_change_24h: "0",
                     percent_change_7d: "0"
                 },
                 {
                     id: "ethereum",
-                    name: "Ethereum"
-                    symbol: "ETH"
-                    price_usd: "1"
-                    percent_change_1h: "0"
-                    percent_change_24h: "0"
+                    name: "Ethereum",
+                    symbol: "ETH",
+                    price_usd: "1",
+                    percent_change_1h: "0",
+                    percent_change_24h: "0",
                     percent_change_7d: "0"
                 },
                 {
                     id: "litecoin",
-                    name: "Litecoin"
-                    symbol: "LTC"
-                    price_usd: "1"
-                    percent_change_1h: "0"
-                    percent_change_24h: "0"
+                    name: "Litecoin",
+                    symbol: "LTC",
+                    price_usd: "1",
+                    percent_change_1h: "0",
+                    percent_change_24h: "0",
                     percent_change_7d: "0"
                 },
             ]

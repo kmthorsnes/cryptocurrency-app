@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import './Cryptocurrency.css';
+    import './Cryptocurrency.css';
 
-class Cryptocurrency extends Component {
+    class Cryptocurrency extends Component {
+
 
     render() {
         var {
@@ -12,7 +13,7 @@ class Cryptocurrency extends Component {
             percent_change_1h,
             percent_change_24h,
             percent_change_7d,
-        } = this.props.date;
+        } = this.props.data;
         return (
             <li className={"cryptocurrency " + id}>
                 <p className="cryptocurrency-name">{name} ({symbol})</p>
